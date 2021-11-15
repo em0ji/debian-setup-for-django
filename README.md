@@ -110,8 +110,8 @@ cd
 mkdir projects
 cd projects
 ```
-
-Теперь установим чистый шаблон Django проекта, с которым можно быстро начать разработку. В шаблон входит конфиг Systemd, nginx, gunicorn.
+## Быстрая настройка чистого шаблона Django проекта
+Теперь установим чистый шаблон Django проекта, с которым можно быстро начать разработку. В шаблон входит конфиг systemd, nginx, gunicorn.
 Клонируйте данный репозиторий:
 ```
 git clone https://github.com/em0ji/debian-setup-for-django.git
@@ -120,6 +120,10 @@ git clone https://github.com/em0ji/debian-setup-for-django.git
 ```
 mv debian-setup-for-django site
 cd site
+```
+Настройте скрипт для утилиты venv
+```
+sudo chmod ugo+x install.sh
 ```
 И запустите `./install` Установка представляет собой указание Python интерпретатора и названия домена:
 
