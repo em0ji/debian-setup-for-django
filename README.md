@@ -113,11 +113,20 @@ sudo rm -rf Python-3.10.0.tgz Python-3.10.0/
 ```
 cd
 mkdir projects
+cd projects
 ```
 
 Теперь установим чистый шаблон Django проекта, с которым можно быстро начать разработку. В шаблон входит конфиг Systemd, nginx, gunicorn.
-
-Установка представляет собой просто указание Python интерпретатора и названия домена, запустите:
+Клонируйте данный репозиторий:
+```
+git clone https://github.com/em0ji/debian-setup-for-django.git
+```
+Переименуйте папку `debian-setup-for-django/` в название своего проекта, например в site:
+```
+mv debian-setup-for-django site
+cd site
+```
+И запуустите `./install` Установка представляет собой указание Python интерпретатора и названия домена:
 
 ```bash
 ./install.sh
