@@ -39,8 +39,14 @@ sudo vim /etc/ssh/sshd_config
 
 ```
 sudo service ssh restart
-sudo passwd www
 ```
+
+##ВАЖНО: перед выходом с сервера, особенно если Вы были под `root` пользователем, убедитесь, что в файл `~/.ssh/authorized_keys` добавлен ваш публичный ключ, иначе получите ошибку входа:
+```
+www@your_server: Permission denied (publickey).
+```
+
+где www - это имя пользователя,  а your_server - ваш сервер.
 
 ## ZSH
 
@@ -106,6 +112,7 @@ sudo rm -rf Python-3.10.0.tgz Python-3.10.0/
 
 Создаем директорию под проекты:
 ```
+cd
 mkdir projects
 ```
 
