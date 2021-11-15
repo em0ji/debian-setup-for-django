@@ -17,13 +17,12 @@ sudo apt-get install -y vim htop git curl wget unzip zip gcc build-essential mak
 sudo apt update && sudo apt upgrade -y
 ```
 
-Cоздаём нового пользователя и добавляем его в группу `sudo`, чтобы он мог запускать процессы от имени суперпользователя:
+Cоздаём нового пользователя, пароль и добавляем его в группу `sudo`, чтобы он мог запускать процессы от имени суперпользователя:
 
 ```
 adduser www 
 usermod -aG sudo www
 ```
-
 где `www` — это имя пользователя, которое вы будете использовать в дальнейшем.
 
 Настройка SSH:
@@ -35,17 +34,13 @@ sudo vim /etc/ssh/sshd_config
     PasswordAuthentication no
 ```
 
-Перезагружаем SSH-сервер и изменяем пароль пользователя `www`:
+Перезагружаем SSH-сервер:
 
 ```
 sudo service ssh restart
 ```
 
-ВАЖНО: перед выходом с сервера, особенно если Вы были под `root` пользователем, убедитесь, что в файл `~/.ssh/authorized_keys` добавлен ваш публичный ключ, иначе получите ошибку входа:
-```
-www@your_server: Permission denied (publickey).
-```
-где www - это имя пользователя,  а your_server - ваш сервер.
+ВАЖНО: перед выходом с сервера, особенно если Вы были под `root` пользователем, убедитесь, что в файл `~/.ssh/authorized_keys` добавлен ваш публичный ключ, иначе получите ошибку входа: `www@your_server: Permission denied (publickey).`, где www - это имя пользователя,  а your_server - ваш сервер.
 
 ## ZSH
 
