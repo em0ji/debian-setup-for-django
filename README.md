@@ -121,7 +121,7 @@ git clone https://github.com/em0ji/debian-setup-for-django.git
 mv debian-setup-for-django site
 cd site
 ```
-И запуустите `./install` Установка представляет собой указание Python интерпретатора и названия домена:
+И запустите `./install` Установка представляет собой указание Python интерпретатора и названия домена:
 
 ```bash
 ./install.sh
