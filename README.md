@@ -127,6 +127,11 @@ sudo chmod ugo+x install.sh
 ```
 Установка представляет собой указание Python интерпретатора и названия домена (либо IP-адреса сервера). В конфиге Django заполняем настройки базы данных (`src/config/settings.py`).
 
+Добавление службы gunicorn в автозапуск:
+```
+sudo systemctl enable gunicorn
+```
+
 Посмотреть статус gunicorn демона:
 
 ```bash
